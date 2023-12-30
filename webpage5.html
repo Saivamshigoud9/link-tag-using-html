@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames and Marquee Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Frames and Marquee Example</h1>
+
+<!-- Using the <marquee> tag (deprecated, use CSS animations instead) -->
+<marquee behavior="scroll" direction="left" scrollamount="5">
+    This is a deprecated marquee tag. Use CSS animations instead.
+</marquee>
+
+<!-- Using the <iframe> tag -->
+<div class="marquee-container">
+    <div class="marquee-content">
+        <iframe src="https://www.amazon.com" width="600" height="400" frameborder="0"></iframe>
+    </div>
+</div>
+
+</body>
+</html>
